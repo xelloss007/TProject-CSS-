@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function func1(){
+		//alert("방가방가");
+		var addr = document.getElementById('addr');
+		var text = addr.value;
+		var addr1 = document.getElementById('addr1');
+		addr1.value = text;
+	}
+	function func3(){
+		var id = document.getElementById('id');
+		var len = id.value.length;
+		alert('입력 문자열 길이 : ' + len)
+	}
+	function func2(){
+		//alert("베이베~~");
+		
+		//글자색 파란색 변경
+		var obj = document.getElementById('content');
+		obj.style.color = 'blue';
+		obj.style.backgroundColor = 'red';
+		var id = document.getElementById('id');
+		obj.innerHTML = id.value;
+	}
+	function func4(){
+		var obj = document.getElementById('mcheck');
+		//obj.checked = true;
+		obj.checked = false;
+		//alert(obj.checked);
+	}
+	function init(){
+		//alert("베이베~~");
+		var obj = document.getElementById('alink');
+		obj.addEventListener('click', func2);
+		
+		obj = document.getElementById('chkbtn');
+		obj.addEventListener('click', func4);
+
+		obj = document.getElementById('radiobtn');
+		obj.addEventListener('click', func5);
+		//document.links.alink.addEventListener('click', func2);
+	}
+	function func5(){
+		//var obj = document.getElementById('size');
+		//alert(obj);
+		var obj = document.getElementsByName('size');
+		//alert(obj.length);
+		var chk=true;
+		for(i=0; i<obj.length; i++){
+			if(obj[i].checked){
+				chk = false;
+				break;
+			}
+		}
+		if(chk){
+			alert('항목이 하나도 선택 안됨');
+		}else{
+			alert('항목이 정상 선택됨');
+		}
+	}
+	
+</script>
+<style type="text/css">
+	#content{
+		width: 200px;
+		height: 200px;
+		color: red;
+		background-color: orange;
+		}
+</style>
+</head>
+<body onload="init()">
+<form action="" method="post" >
+	id<input type="text" name="id" id="id"><br>
+	주소<input type="text" name="addr" id="addr"><br>
+	새주소<input type="text" name="addr1" id="addr1"><br>
+	메일수신여부<input type="checkbox" name="mcheck" id ="mcheck" ><br>
+	대<input type="radio" name="size" id="size">
+	중<input type="radio" name="size" id="size">
+	소<input type="radio" name="size" id="size">
+</form>
+<a href="#" onclick="func3()">클릭</a>
+<a href="#" id = 'alink'>섹시</a>
+<a href="#" id = 'chkbtn'>체크박스 확인</a>
+<a href="#" id = 'radiobtn'>라디오 확인</a>
+<div id="content">test</div>
+</body>
+</html>

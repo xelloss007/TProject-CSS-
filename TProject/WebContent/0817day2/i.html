@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="http://fonts.googleapis.com/css?family=henny+penny"
+	rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Times New Roman', serif;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+</style>
+
+<style type="text/css">
+#main_header {
+	width: 960px;
+	margin: 0 auto;
+	height: 160px;
+	position: relative;
+	background-color: #f15615;
+}
+
+#main_header>#title {
+	position: absolute;
+	left: 20px;
+	top: 30px;
+}
+
+#main_header>#main_gnb {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#main_header>#main_lnb {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+</style>
+
+<style type="text/css">
+#title {
+	font-family: 'Henny penny', cursive;
+}
+</style>
+
+<style type="text/css">
+#main_gnb>ul {
+	overflow: hidden;
+}
+
+#main_gnb>ul>li {
+	float: left;
+}
+
+#main_gnb>ul>li>a {
+	display: block;
+	padding: 2px 10px;
+	border: 1px solid black;
+}
+
+#main_gnb>ul>li>a:hover {
+	background: black;
+	color: white;
+}
+
+#main_gnb>ul>li:first-child>a {
+	border-radius: 10px 0 0 10px;
+}
+
+#main_gnb>ul>li:last-child>a {
+	border-radius: 0 10px 10px 0;
+}
+</style>
+
+<style type="text/css">
+#main_lnb>ul {
+	overflow: hidden;
+}
+
+#main_lnb>ul>li {
+	float: left;
+}
+
+#main_lnb>ul>li>a {
+	display: block;
+	padding: 10px 20px;
+	border: 1px solid black;
+}
+
+#main_lnb>ul>li>a:hover {
+	background: black;
+	color: white;
+}
+
+#main_lnb>ul>li:first-child>a {
+	border-radius: 10px 0 0 10px;
+}
+
+#main_lnb>ul>li:last-child>a {
+	border-radius: 0 10px 10px 0;
+}
+</style>
+
+<style type="text/css">
+#content {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#content>#main_section {
+	width: 750px;
+	float: right;
+}
+
+#content>#main_aside {
+	width: 200px;
+	float: left;
+}
+</style>
+
+<style type="text/css">
+#main_section>article.main_article {
+	margin-bottom: 10px;
+	pause: 20px;
+	border: 1px solid black;
+}
+</style>
+
+<style type="text/css">
+input:NTH-OF-TYPE(1) {
+	display: none;
+}
+
+input:NTH-OF-TYPE(1) ~ div:NTH-OF-TYPE(1) {
+	display: none;
+}
+
+input:NTH-OF-TYPE(1):CHECKED ~ div:NTH-OF-TYPE(1) {
+	display: block;
+}
+
+input:NTH-OF-TYPE(2) {
+	display: none;
+}
+
+input:NTH-OF-TYPE(2) ~ div:NTH-OF-TYPE(2) {
+	display: none;
+}
+
+input:NTH-OF-TYPE(2):CHECKED ~ div:NTH-OF-TYPE(2) {
+	display: block;
+}
+
+section.buttons {
+	overflow: hidden;
+}
+
+section.buttons>label {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	box-sizing: border-box;
+	border: 1px solid black;
+	background: orange;
+	color: red;
+}
+
+input:NTH-OF-TYPE(1):CHECKED ~ section.buttons>label:NTH-OF-TYPE(1) {
+	background: aqua;
+	color: black;
+}
+
+input:NTH-OF-TYPE(2):CHECKED ~ section.buttons>label:NTH-OF-TYPE(2) {
+	background: aqua;
+	color: black;
+}
+</style>
+
+<style type="text/css">
+.item {
+	overflow: hidden;
+	padding: 10px;
+	border: 1px solid black;
+	border-top: none;
+}
+
+.thumbnail {
+	float: left;
+}
+
+.description>strong {
+	display: block;
+	width: 120px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+</style>
+
+<style type="text/css">
+#main_footer {
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid black;;
+	text-align: center;
+}
+</style>
+
+
+
+</head>
+<body>
+	<!-- <a href="#"><img src="http://placehold.it/300x200"/></a> -->
+	<header id="main_header">
+		<div id="title">
+			<h1>Rint Development</h1>
+			<h2>HTML5 + CSS3 Basic</h2>
+		</div>
+		<nav id="main_gnb">
+			<ul>
+				<li><a href="#">web</a></li>
+				<li><a href="#">mobile</a></li>
+				<li><a href="#">game</a></li>
+				<li><a href="#">simulation</a></li>
+				<li><a href="#">data</a></li>
+			</ul>
+		</nav>
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">html5</a></li>
+				<li><a href="#">css3</a></li>
+				<li><a href="#">javascript</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">node.js</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="content">
+		<section id="main_section">
+			<article class="main_article">
+				<h1>main_article</h1>
+				<p>[OSEN=한용섭 기자] 포스트시즌과 거리가 멀어 보이던 LA 에인절스가 최근 상승세를 타며
+					아메리칸리그(AL) 와일드카드 레이스에 뛰어들었다. 현역 최고의 선수 마이크 트라웃이 두 번째 포스트시즌을 경험할 수
+					있을까. LA 에인절스는 7월말 51승55패로 와일드카드 2위 캔자스시티에 5.5경기나 뒤져 있었다. 그러나 지난 주말
+					시애틀과의 원정 4연전을 싹쓸이, 최근 6연승의 상승세를 타며 61승58패가 됐다. 개막 초반 이후 가장 높은 승률이다.
+
+					덕분에 AL 와일드카드 레이스(두 자리)에서 뉴욕 양키스(61승55패)와 1~2위를 달리고 있다. 미네소타(0.5),
+					캔자스시티(1.0), 시애틀(2.0), 탬파베이(2.0), 볼티모어(2.5)를 근소한 차이지만 모두 제치고 2위로
+					올라섰다. 올스타 휴식기 이후 손가락 부상에서 복귀한 트라웃의 상승세가 계속되고 있다. 시애틀과 1차전, 에인절스는 8회
+					3점을 허용하며 3-3 동점이 됐다. 그러자 트라웃은 9회 2사 만루에서 3타점 2루타를 터뜨려 6-3 승리를 이끌었다.
+
+					2차전에선 1-5로 뒤지던 에인절스는 7회 5-5 동점을 만들었다. 트라웃은 볼넷을 골라 2사 만루를 만들었고, 알버트
+					푸홀스의 2타점 적시타를 비롯해 3연속 적시타가 터져 동점에 성공했다. 9회 1사 후 트라웃은 다시 볼넷으로 출루했고,
+					상대 실책으로 결승 득점을 올렸다. 3차전에선 1-3으로 뒤진 7회 동점을 만들고, 8회 6-3으로 역전시켜 승리했다.
+					8회 터진 푸홀스의 2타점 2루타가 결승타, 푸홀스 앞에서 트라웃은 볼넷을 골라 무사 1,2루를 만들었다. 마지막
+					4차전, 에인절스는 1-1 동점인 5회 3점을 뽑아 균형을 깼다. 득점의 시작은 선두타자 트라웃의 볼넷으로 시작했다.
+					에인절스는 2안타 3볼넷으로 3점을 뽑았다. 트라웃은 시애틀 4연전에서 3안타(13타수)를 때렸으나 찬스마다 6볼넷으로
+					기여했다. 복귀 후 한 달 동안 타율 3할4푼7리(98타수 34안타) 7홈런 19타점 21득점 25볼넷을 기록 중이다.
+					출루율 0.480, 장타율 0.602, OPS 1.082다. 에인절스의 포스트시즌 진출은 투수진에 달려 있다. 마운드가
+					걱정이다. 선발진의 J.C 라미레스가 10승10패 평균자책점 4.26으로 팀내 다승 1위다. 니키 놀래스코와 제시
+					차베스는 합작 11승22패 평균자책점 5점대 중반으로 부진 중이다. 유망주 맷 슈메이커는 14경기에서 5승6패 평균자책점
+					4.52. 마무리 버드 노리스(2승 5패 18세이브)는 평균자책점 4.60으로 부진하자 최근 마무리 자리를 넘겨줬다.
+
+					지난 4월 볼티모어에서 현금 트레이드한 파커 브리드웰이 선발로 11경기에 나와 7승1패 평균자책점 2.88로 분전
+					중이다. 지난 7월 애리조나에서 영입한 불펜 데이비드 에르난데스가 8홀드 평균자책점 2.23으로 힘을 내고 있다.
+
+					트라웃은 2011년 데뷔 후 MVP를 두 차례 차지하는 등 20대 초반부터 메이저리그 최고 선수로 인정받고 있지만,
+					포스트시즌 경험은 단 한 차례다. 2011년 이후 에인절스는 2014년 포스트시즌에 진출했고, AL 디비전시리즈에서
+					캔자스시티에 3패로 탈락했다. 40여경기를 남겨두고 AL 와일드카드 경쟁은 더욱 치열해졌다. 트라웃을 앞세운 에인절스가
+					와일드카드 경쟁에서 승자가 될 지 지켜볼 일이다.</p>
+			</article>
+			<article class="main_article">
+				<h1>main_article</h1>
+				<p>[매경닷컴 MK스포츠(美 로스앤젤레스) 김재호 특파원] '악의 제국'의 목표는 분명하다. 포스트시즌 아니면
+					실패다. 할 스타인브레너 양키스 구단주는 17일(한국시간) 시카고에서 열린 메이저리그 구단주 회의에 참석한 자리에서
+					'MLB.com' 등 현지 언론과 인터뷰를 가졌다. 그는 "플레이오프에 가지 못하면 그것은 실패다. 어떤 시즌이든
+					마찬가지다. 그것이 우리의 마음가짐"이라며 분명한 메시지를 전했다. 할 스타인브레너 양키스 구단주는 포스트시즌에 가지
+					못하면 실패라는 메시지를 전했다. 사진=ⓒAFPBBNews = News1 1903년 창단한 양키스는 지난해까지
+					114시즌을 치르며 52차례 포스트시즌에 진출했고, 40번의 아메리칸리그 우승과 27번의 월드시리즈 우승을 차지했다.
+					메이저리그에 가장 성공적인 프랜차이즈로 꼽히고 있다. 그러나 최근에는 성공보다 실패에 가까웠다. 마지막 4시즌 중
+					포스트시즌 진출은 한 차례에 불과했다. 그것도 2015년으로 와일드카드 플레이오프에서 휴스턴 애스트로스에 패했다. 이번
+					시즌은 17일 경기를 앞두고 63승 55패를 기록중이다. 아메리칸리그 동부 지구에서 보스턴 레드삭스에 4.5게임차 뒤진
+					2위이며, 와일드카드 레이스에서 2위 LA에인절스에 2.5게임 앞선 1위를 달리고 있다. 이들은 논 웨이버 트레이드
+					마감을 앞두고 토드 프레이지어, 데이빗 로버트슨, 소니 그레이, 하이메 가르시아를 영입하며 공격적인 전력 보강에 나섰다.
+
+					스타인브레너는 "첫 2개월하고 반은 좋았지만, 최근 2개월은 힘들었다. 이제 그 힘든 시기에서 벗어나고 있다. 트레이드
+					마감시한에 맞춰 영입한 투수들이 이미 도움을 주고 있다. 남은 5~6주는 강한 모습을 보여줄 것"이라며 팀에 대한
+					기대감을 드러내는 것도 잊지 않았다. 양키스는 순위 경쟁에서 밀려난 지난해 주전 선수 일부를 처분하며 유망주들을 얻었다.
+					그는 이에 대해 "어려운 결정이었지만, 내가 내린 결정이었다. 그리고 우리는 좋은 선수들을 많이 얻었고, 현재 순위
+					경쟁을 하고 있다"며 "우리는 아주 좋은 선수 육성 시스템을 갖췄고, 동시에 순위 경쟁을 하고 있다. 이것은 언제나 좋은
+					신호"라고 말했다. 그는 이어서 시즌 종료 후 이어질 겨울 이적시장에 대해서는 "여전히 FA 시장에 뛰어들 수 있다고
+					생각한다. 마이너리그 유망주들 중 누가 준비됐는지, 누가 아직 시간이 필요한지를 볼 것이고 팀의 연봉 총액을 볼
+					것"이라며 자신의 생각을 전했다. [greatnemo@maekyung.com] [MK스포츠 바로가기] [MK 핫! 포토]
+					[ⓒ MK스포츠 & sports.mk.co.kr, 무단전재 및 재배포 금지]</p>
+			</article>
+			<article class="main_article">
+				<h1>main_article</h1>
+				<p>
+					곧 'TOKKI2'가 적힌 유니폼을 입게 될 조이 보토(33·신시내티 레즈)는 올해도 무시무시한 시즌을 만들고
+					있다(.315 .447 .597). [관련기사] 이대로 통산 6번째 출루율 리그 1위에 오르면 그의 앞에는 테드
+					윌리엄스(12회) 베이브 루스(10회) 배리 본즈(10회) 로저스 혼스비(9회) 타이 콥(7회) 5명밖에 남지 않는다.
+					최고의 타격 능력에 비해 홈런이 부족하다는 아쉬움이 있었던 보토는 또한 121경기에서 31개를 때려내 2010년 MVP
+					시즌의 37개를 넘는 42개 페이스를 보이고 있다. 1913년 이후 3000타석 이상을 소화한 역대 1733명의 전현직
+					선수 중 타율 출루율 장타율이 보토의 통산 성적(.313 .427 .541)을 모두 넘어서는 타자는 테드
+					윌리엄스(.344 .482 .634) 베이브 루스(.342 .474 .690) 루 게릭(.340 .447 .632) 지미
+					팍스(.325 .428 .609) 로저스 혼스비(.358 .434 .577) 5명뿐이다(이들은 모두 1940년 이전에
+					데뷔했다). 아직 26세 시즌을 보내고 있을 뿐인 마이크 트라웃(LA 에인절스) 역시 장타율에서만 보토를 앞선다(통산
+					.309 .411 .568). 16일 시카고 컵스 원정경기. 보토는 첫 타석에서 초구 안타를 때려냈다. 그러나 두 번째
+					타석에서 역시 초구를 공략한 103마일 타구가 우익수에게 잡혔고 세 번째 타석의 잘 맞은 타구 또한 투수 직선타가 됐다.
+					4타수1안타로 경기를 끝낸 보토는 결국 7월27일부터 이어왔던 연속 2출루 이상 경기가 20경기에서 중단됐다. 메이저리그
+					최고 기록은 테드 윌리엄스의 21경기로, 이 기록을 20경기 이상 만들어낸 타자는 윌리엄스와 보토, 배리
+					본즈(20경기)와 피트 로즈(20경기) 네 명뿐이다. 지난해 브라이스 하퍼(워싱턴)를 상대로 19타석 13볼넷을 내주기도
+					했던 컵스는 이번 시리즈에서 또 하나의 창의적인 시도를 했다. 외야 타구를 쏟아내고 있는 보토를 막기 위해 3루수를
+					좌익수와 중견수 사이에 두는 외야수 네 명 시프트를 선보인 것이다(이미지 출처-마이크 페트리엘로 트위터). 인내심의
+					화신으로 오해 받을 수 있는 보토는 타석에서 누구보다도 적극적이다. 그는 조이 갈로(텍사스) 크리스 데이비스(오클랜드)와
+					함께 초구 홈런이 가장 많은 타자다(10개). 보토의 초구 스윙률 35.1%는 메이저리그 평균인 28.6%를
+					상회한다(최고 아비사일 가르시아 47.9% 최저 조 마우어 7.4%). 초구 타격이 스트라이크(헛스윙 or 파울)로
+					이어지더라도 볼카운트 싸움을 장기전으로 끌고 갈 자신이 있기 때문이다(추신수 24.5% 김현수 22.3%). 보토가 점점
+					더 무서운 타자가 되고 있는 비결은 과거에는 투스트라이크 이후에 했던
+					<배트 짧게 잡기>를 모든 카운트로 확대했기 때문이다. 그리고 수 년 간의 노력을 통해 짧게 잡은 배트로 장타를
+					때려내는 법을 터득해냈다. 하지만 보토가 보여주고 있는 가장 뛰어난 능력은 역시 선구안이다. 보토는 스트라이크 존을
+					벗어난 공에 방망이를 내는 아웃존 스윙률이 15.7%로 메이저리그 1위에 올라 있다(2위 맷 카펜터 17.4%).
+					출루율이 .505에 달하고 있는 후반기는 심지어 8.9%에 불과하다. 그와 함께 '존 스윙률' 또한 메이저리그 평균을
+					넘어서는 71.3%를 기록하고 있다. 이는 보토의 낮은 아웃존 스윙률이 소극적 스윙 때문이 아닌 뛰어난 선구안 덕분임을
+					증명한다. 아웃존&존 스윙률 차이 보토 : 15.7% / 71.3% / 55.6% 평균 : 29.8% / 66.8% /
+					37.0% 카펜터 : 17.4% / 55.1% / 37.7% 추신수 : 20.6% / 60.8% / 40.2% 김현수 :
+					22.6% / 65.1% / 42.5% 그렇다면 뛰어난 선구안은 어디서 오는 것일까. 손혁 MBC 해설위원의 도움으로
+					얻은 남가주대학(USC) <로스 디덕스 야구연구소>의 자료에 따르면 이는 동체 시력과 밀접한 관련이 있다.
+
+					타자는 공이 투수의 손끝을 떠나 54피트(16.46미터)를 날아오는 동안 타격에 필요한 모든 작업을 수행해야 한다.
+					문제는 투수가 던진 공을 끝까지 보는 것이 불가능하다는 것이다. 평균적인 선수들은 홈플레이트의
+					10~12피트(3.0~3.7미터) 앞에서 순간적으로 공을 시야에서 잃게 된다. 반면 동체 세력이 뛰어난 선수들은
+					6~8피트(1.8~2.4미터) 앞까지 공을 시야에 둘 수 있다. 동체 시력은 인간의 안구를 감싸고 있는 6개의 근육이
+					얼마나 빠르게 작동하느냐에 따라 결정된다. 보토 역시 뛰어난 동체 시력의 소유자임이 분명하다. 그러고 보니 테드
+					윌리엄스(사진)는 무시무시한 동체 시력의 소유자였다. 윌리엄스는 해군 복무 시절 동체 시력에 대해 정밀 조사를 받은 적이
+					있는데 결과는 10만 명 중의 6에 해당되는 상위 0.006%였다. 보스턴은 2011년 드래프트를 앞두고 동체 시력이
+					뛰어난 선수를 찾아냈다. 5라운드에서 지명한 무키 베츠(21)였다. [관련기사] 베츠는 16일 세인트루이스전 3-4로
+					뒤진 9회말 2사 1,2루 볼카운트 1-2 상황에서 바깥쪽으로 완벽하게 들어온 슬라이더 유인구 두 개를 골라낸 다음
+					가운데로 몰린 6구 슬라이더를 받아쳐 역전 끝내기 2타점 2루타를 만들어냈다. 54볼넷 56삼진을 기록 중인
+					베츠(.265 .341 .448)는 또한 스윙을 했을 때 인플레이 타구를 만들어내는 비율이 압도적인 메이저리그
+					1위(54.7%)에 해당된다. 이제 베츠에게 필요한 것은 보토와 같은 노력으로 좋은 타구를 더 꾸준하게 생산할 수 있는
+					스윙을 가지는 것이다. 이처럼 최근 몇몇 메이저리그 구단은 동체 시력이 뛰어난 선수를 찾는 신경 스카우팅(neuro
+					scouting)과 선수들의 동체 시력 향상을 위한 신경 트레이닝에 나서고 있다. 더불어 LA 다저스가 앤드류 프리드먼
+					사장 부임 후 팀의 의료 분석 팀에 엄청난 투자를 한 것처럼, 과거 빌리 빈 오클랜드 사장이 말한 <메디신 볼>은
+					<사이언스 볼>과 함께 미지의 세계를 향해 나아가고 있다. [관련기사] 기사제공 김형준 칼럼
+				</p>
+			</article>
+		</section>
+		<aside id="main_aside">
+			<input id="first" type="radio" name="tab" checked="checked" /> <input
+				id="second" type="radio" name="tab" />
+			<section class="buttons">
+				<label for="first">First</label> <label for="second">Second</label>
+			</section>
+			<div class="tab_item">
+				<ul>
+					<li class="item"><a href="#">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45" />
+							</div>
+							<div class="description">
+								<strong>HTML5 Canvas</strong>
+								<p>2012-03-15</p>
+							</div>
+					</a></li>
+					<li class="item"><a href="#">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45" />
+							</div>
+							<div class="description">
+								<strong>HTML5 Audio</strong>
+								<p>2012-03-15</p>
+							</div>
+					</a></li>
+					<li class="item"><a href="#">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45" />
+							</div>
+							<div class="description">
+								<strong>HTML5 Video</strong>
+								<p>2012-03-15</p>
+							</div>
+					</a></li>
+					<li class="item"><a href="#">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45" />
+							</div>
+							<div class="description">
+								<strong>HTML5 Semantic Web</strong>
+								<p>2012-03-15</p>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+			<div class="tab_item">
+				<ul>
+					<li class="item"><a href="#">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45" />
+							</div>
+							<div class="description">
+								<strong>CSS3 Transition</strong>
+								<p>2012-03-15</p>
+							</div>
+					</a></li>
+					<li class="item"><a href="#">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45" />
+							</div>
+							<div class="description">
+								<strong>CSS3 Animation</strong>
+								<p>2012-03-15</p>
+							</div>
+					</a></li>
+					<li class="item"><a href="#">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45" />
+							</div>
+							<div class="description">
+								<strong>CSS3 Border</strong>
+								<p>2012-03-15</p>
+							</div>
+					</a></li>
+					<li class="item"><a href="#">
+							<div class="thumbnail">
+								<img src="http://placehold.it/45x45" />
+							</div>
+							<div class="description">
+								<strong>CSS3 Box</strong>
+								<p>2012-03-15</p>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+		</aside>
+	</div>
+	<footer id="main_footer">
+		<h3>HTML5 + CSS3 Basic</h3>
+		<address>Website layout Basic</address>
+	</footer>
+
+</body>
+</html>
